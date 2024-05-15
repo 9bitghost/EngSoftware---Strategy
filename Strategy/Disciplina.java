@@ -2,11 +2,11 @@ package Strategy;
 
 public class Disciplina{
 	
-	public double media;
-	public String nome;
-	public double P1;
-	public double P2;
-	public String Situacao;
+	private double media;
+	private String nome;
+	private double P1;
+	private double P2;
+	private String Situacao;
 	
 	public Disciplina(Aritmetica calculo) {
 	
