@@ -6,7 +6,7 @@ public class Main {
 		
 		Aritmetica calculo = new Aritmetica(); 
 		
-		// Geometrica calculo = new Geometrica()
+		//Geometrica calculo = new Geometrica();
 		
 		Disciplina d = new Disciplina(calculo);
 		
