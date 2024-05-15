@@ -2,19 +2,16 @@ package Strategy;
 
 public class Disciplina{
 	
-	private double media;
-	private String nome;
-	private double P1;
-	private double P2;
-	private String Situacao;
+	public double media;
+	public String nome;
+	public double P1;
+	public double P2;
+	public String situacao;
+	private ICalcMedia calculo;
 	
-	public Disciplina(Aritmetica calculo) {
-	
-	}
-	
-	public Disciplina(Geometrica calculo){
-		
-	}
+    public Disciplina(ICalcMedia calculo) {
+        this.calculo = calculo;
+    }
 	
 	public void setMedia(double media) {
 		this.media = media;
@@ -48,16 +45,17 @@ public class Disciplina{
 		return P2;
 	}
 	
-	public void setSituacao(String Situacao) {
-		this.Situacao = Situacao;
+	public void setSituacao(String situacao) {
+		this.situacao = situacao;
 	}
 	
 	public String getSituacao() {
-		return Situacao;
+		return situacao;
 	}
 
-	public void CalcularMedia() {
-		
-	}
+    public void CalcularMedia() {
+        this.media = calculo.CalculaMedia(this.P1, this.P2);
+        this.situacao = calculo.Situacao(this.media);
+    }
 
 }
